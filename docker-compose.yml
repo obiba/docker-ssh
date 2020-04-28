@@ -1,0 +1,17 @@
+version: '3'
+ 
+services:
+    server:
+        build:
+            context: .
+            args:
+                SSH_MASTER_USER: ${SSH_MASTER_USER}
+                SSH_MASTER_PASS: ${SSH_MASTER_PASS}
+        hostname: server
+        environment:
+                - MASTER_USER=master
+                - MASTER_PASS=password123
+        ports:
+            - "2223:22"
+        volumes:
+            - ./uploads:/uploads
