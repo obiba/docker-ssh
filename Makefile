@@ -8,7 +8,7 @@ no_cache=false
 
 # Build Docker image
 build:
-	sudo docker build --build-arg SSH_MASTER_USER=$(user) --build-arg SSH_MASTER_PASS=$(pwd) --no-cache=$(no_cache) -t="obiba/ssh:snapshot" .
+	sudo docker build --no-cache=$(no_cache) -t="obiba/ssh:snapshot" .
 
 up:
 	sudo docker-compose up -d
