@@ -1,7 +1,7 @@
 FROM debian:stretch
  
-ARG SSH_MASTER_USER
-ARG SSH_MASTER_PASS
+ENV SSH_MASTER_USER master
+ENV SSH_MASTER_PASS master
  
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
